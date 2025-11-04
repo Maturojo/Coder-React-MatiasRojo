@@ -13,7 +13,7 @@
             className="bg-white/80 backdrop-blur border-bottom shadow-sm py-2"
             >
             <Container>
-                {/* Logo + Marca */}
+                
                 <Navbar.Brand href="#home" className="d-flex align-items-center gap-2">
                 <img
                     src="../Logo.png"
