@@ -4,7 +4,6 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { NavLink, Link } from "react-router-dom";
-import CartwidgetIcons from "./CartwidgetIcons";
 import "../css/Navbar.css";
 
 function NavbarBoostrap() {
@@ -12,64 +11,61 @@ function NavbarBoostrap() {
     <Navbar
       expand="lg"
       sticky="top"
-      className="navbar-reddion shadow-sm"   
+      className="navbar-reddion shadow-sm"
     >
       <Container>
-        
+        {/* LOGO / MARCA */}
         <Link to="/" className="navbar-brand d-flex align-items-center gap-2">
-          <span className="brand-reddion">Reddion</span>
+          <span className="brand-reddion">REDDION</span>
         </Link>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler-reddion" />
 
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto align-items-center">
+          <Nav className="navbar-links mx-auto align-items-center gap-5">
+
+            <Nav.Link
+              as={NavLink}
+              to="/"
+              className="nav-reddion-link mx-3"
+            >
+              Inicio
+            </Nav.Link>
+
             <NavDropdown
               title="Productos"
               id="productos-dropdown"
-              className="dropdown-reddion"
-              menuVariant="dark"
+              className="nav-reddion-link mx-3"
+              
             >
-              <NavDropdown.Item
-                as={NavLink}
-                to="/"
-                end
-                className="dropdown-item-reddion"
-              >
-                Todos
+              <NavDropdown.Item as={NavLink} to="/" end>
+                Todos los productos
               </NavDropdown.Item>
 
               <NavDropdown.Divider />
 
-              <NavDropdown.Item
-                as={NavLink}
-                to="/category/remeras"
-                className="dropdown-item-reddion"
-              >
+              <NavDropdown.Item as={NavLink} to="/category/remeras">
                 Remeras
               </NavDropdown.Item>
 
-              <NavDropdown.Item
-                as={NavLink}
-                to="/category/hoodies"
-                className="dropdown-item-reddion"
-              >
+              <NavDropdown.Item as={NavLink} to="/category/hoodies">
                 Hoodies
               </NavDropdown.Item>
 
-              <NavDropdown.Item
-                as={NavLink}
-                to="/category/tazas"
-                className="dropdown-item-reddion"
-              >
+              <NavDropdown.Item as={NavLink} to="/category/tazas">
                 Tazas
               </NavDropdown.Item>
             </NavDropdown>
-          </Nav>
 
-          <div className="ms-lg-4">
-            <CartwidgetIcons counter={0} />
-          </div>
+            <Nav.Link
+              as={NavLink}
+              to="/contacto"
+              className="nav-reddion-link mx-3"
+            >
+              Contacto
+            </Nav.Link>
+
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>

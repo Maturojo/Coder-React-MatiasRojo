@@ -1,103 +1,79 @@
-/* Paleta Reddion (podés ajustarla):
-   Negro principal: #050505
-   Gris texto:      #e5e5e5
-   Rojo acento:     #C1121F
-*/
+
+:root {
+  --reddion-black: #050505;
+  --reddion-gray: #e5e5e5;
+  --reddion-red: #C1121F;
+}
+
 
 .navbar-reddion {
-  background: #050505;
-  padding-block: 0.5rem;
+  background: var(--reddion-black);
+  padding-block: 0.7rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.navbar-reddion .navbar-brand {
-  padding: 0;
-}
-
 .brand-reddion {
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #f5f5f5;
-  font-size: 0.9rem;
-}
-
-.brand-reddion:hover {
   color: #ffffff;
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
-/* Toggler (botón hamburguesa) */
+.nav-reddion-link {
+  color: var(--reddion-gray) !important;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+}
+
+.nav-reddion-link:hover {
+  color: #fff !important;
+}
+
+/* SUBRAYADO ANIMADO */
+
+
+.nav-reddion-link:hover::after,
+.nav-reddion-link.active::after {
+  width: 100%;
+}
+
+/* DROPDOWN */
+#productos-dropdown .dropdown-menu {
+  background: white;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#productos-dropdown .dropdown-item {
+  color: var(--reddion-gray);
+}
+
+#productos-dropdown .dropdown-item:hover {
+  background: var(--reddion-red);
+  color: #fff;
+}
+
+/* TOGGLER */
 .toggler-reddion {
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .toggler-reddion .navbar-toggler-icon {
   filter: invert(1);
 }
 
-/* Links / Dropdown */
-
-.navbar-reddion .nav-link,
-.navbar-reddion .dropdown-toggle {
-  color: #e5e5e5 !important;
-  font-weight: 500;
-  font-size: 0.95rem;
-  position: relative;
+/* Centrar el grupo de links dentro de la navbar */
+.navbar-links {
+  justify-content: center;
 }
 
-.navbar-reddion .nav-link:hover,
-.navbar-reddion .dropdown-toggle:hover {
-  color: #ffffff !important;
+/* Opcional: aseguramos que en escritorio queden bien centrados */
+@media (min-width: 992px) {
+  .navbar-reddion .navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
-
-/* Subrayado sutil al hover / activo */
-.navbar-reddion .nav-link::after,
-.navbar-reddion .dropdown-toggle::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -0.3rem;
-  width: 0;
-  height: 2px;
-  background: #C1121F;
-  transition: width 0.2s ease-out;
-}
-
-.navbar-reddion .nav-link:hover::after,
-.navbar-reddion .dropdown-toggle:hover::after,
-.navbar-reddion .nav-link.active::after {
-  width: 100%;
-}
-
-/* Dropdown */
-
-.dropdown-reddion .dropdown-menu {
-  background: #121212;
-  border-radius: 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 0.25rem 0;
-}
-
-.dropdown-item-reddion {
-  color: #e5e5e5;
-  font-size: 0.9rem;
-  padding: 0.5rem 1rem;
-}
-
-.dropdown-item-reddion:hover,
-.dropdown-item-reddion.active {
-  background: #C1121F;
-  color: #ffffff;
-}
-
-/* Carrito */
-
-.navbar-reddion .nav-link.position-relative {
-  color: #e5e5e5 !important;
-}
-
-.navbar-reddion .nav-link.position-relative:hover {
-  color: #ffffff !important;
-}
-
 
