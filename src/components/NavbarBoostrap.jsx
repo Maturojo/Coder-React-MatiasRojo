@@ -1,51 +1,79 @@
-    import Container from 'react-bootstrap/Container';
-    import Nav from 'react-bootstrap/Nav';
-    import Navbar from 'react-bootstrap/Navbar';
-    import NavDropdown from 'react-bootstrap/NavDropdown';
-    import CartwidgetIcons from './CartwidgetIcons';
-    import "../css/Navbar.css";
+// src/components/NavbarBoostrap.jsx
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { NavLink, Link } from "react-router-dom";
+import CartwidgetIcons from "./CartwidgetIcons";
+import "../css/Navbar.css";
 
-    function BasicExample() {
-    return (
-        <Navbar
-            expand="lg"
-            sticky="top"
-            className="bg-white/80 backdrop-blur border-bottom shadow-sm py-2"
+function NavbarBoostrap() {
+  return (
+    <Navbar
+      expand="lg"
+      sticky="top"
+      className="navbar-reddion shadow-sm"   
+    >
+      <Container>
+        
+        <Link to="/" className="navbar-brand d-flex align-items-center gap-2">
+          <span className="brand-reddion">Reddion</span>
+        </Link>
+
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler-reddion" />
+
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto align-items-center">
+            <NavDropdown
+              title="Productos"
+              id="productos-dropdown"
+              className="dropdown-reddion"
+              menuVariant="dark"
             >
-            <Container>
-                
-                <Navbar.Brand href="#home" className="d-flex align-items-center gap-2">
-                <img
-                    src="../Logo.png"
-                    alt="Logo"
-                    style={{ width: "2.8rem", borderRadius: "0.5rem" }}
-                />
-                <span className="fw-bold fs-5 text-dark">Mi App</span>
-                </Navbar.Brand>
+              <NavDropdown.Item
+                as={NavLink}
+                to="/"
+                end
+                className="dropdown-item-reddion"
+              >
+                Todos
+              </NavDropdown.Item>
 
-                
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <NavDropdown.Divider />
 
-                {/* Contenido colapsable */}
-                <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto align-items-center">
-                    <Nav.Link href="#home" className="mx-2 text-dark fw-medium hover-link">
-                    Nuevos
-                    </Nav.Link>
-                    <Nav.Link href="#link" className="mx-2 text-dark fw-medium hover-link">
-                    Link
-                    </Nav.Link>
-                    
-                </Nav>
+              <NavDropdown.Item
+                as={NavLink}
+                to="/category/remeras"
+                className="dropdown-item-reddion"
+              >
+                Remeras
+              </NavDropdown.Item>
 
-                
-                <div className="ms-lg-4">
-                    <CartwidgetIcons counter={15} />
-                </div>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
-    );
-    }
+              <NavDropdown.Item
+                as={NavLink}
+                to="/category/hoodies"
+                className="dropdown-item-reddion"
+              >
+                Hoodies
+              </NavDropdown.Item>
 
-    export default BasicExample;
+              <NavDropdown.Item
+                as={NavLink}
+                to="/category/tazas"
+                className="dropdown-item-reddion"
+              >
+                Tazas
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+
+          <div className="ms-lg-4">
+            <CartwidgetIcons counter={0} />
+          </div>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+}
+
+export default NavbarBoostrap;
