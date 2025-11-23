@@ -13,7 +13,7 @@ function App() {
         {/* Catálogo completo */}
         <Route
           path="/"
-          element={<ItemListContainer saludo="Bienvenido a mi App" />}
+          element={<ItemListContainer saludo="Bienvenido a mi REDDION" />}
         />
 
         {/* Catálogo filtrado por categoría */}

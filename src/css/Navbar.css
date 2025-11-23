@@ -77,3 +77,61 @@
   }
 }
 
+/* Forzar que el dropdown parezca un link normal */
+.navbar-reddion .dropdown-toggle {
+  color: var(--reddion-gray) !important;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0 1.5rem;
+  display: inline-block !important;
+}
+
+.navbar-reddion .dropdown-toggle:hover,
+.navbar-reddion .dropdown-toggle:focus {
+  color: #fff !important;
+}
+
+/* Subrayado animado para dropdown igual que otros links */
+.navbar-reddion .dropdown-toggle::after {
+  content: "";
+  border: none !important; /* saca la flechita por defecto */
+}
+
+.navbar-reddion .dropdown-container {
+  position: relative;
+}
+
+.navbar-reddion .dropdown-container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--reddion-red);
+  transition: width 0.25s ease-out;
+}
+
+.navbar-reddion .dropdown-container:hover::after {
+  width: 100%;
+}
+
+
+.navbar-reddion .dropdown-menu {
+  background-color: #1a1a1a !important;   
+  border: 1px solid #222;              
+}
+
+.navbar-reddion .dropdown-item {
+  color: #fff !important;              
+  font-weight: 500;
+}
+
+/* Hover del dropdown */
+.navbar-reddion .dropdown-item:hover {
+  background-color: #222; 
+  color: #fff !important;               
+}
+
+

@@ -1,0 +1,55 @@
+/* Card Reddion 3D */
+/* Card Reddion 3D */
+.card-reddion {
+  background-color: #1a1a1a;  /* para probar bien si agarra */
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow:
+    inset 0 0 40px rgba(255, 255, 255, 0.03),
+    0 20px 60px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
+}
+
+/* Hover: levanta la card */
+.card-reddion:hover {
+transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 40px 80px rgba(255, 255, 255, 0.1),
+              inset 0 0 20px rgba(255, 255, 255, 0.08);
+}
+
+/* Imagen dentro de la card */
+.card-reddion img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-reddion h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  text-transform: uppercase; /* opcional, si lo querés igual */
+  margin-bottom: 0.5rem;
+}
+
+.card-reddion p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #dddddd;
+  margin-bottom: 1rem;
+}
+
+.card-reddion strong {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+
+

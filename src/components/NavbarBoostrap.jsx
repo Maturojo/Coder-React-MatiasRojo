@@ -14,29 +14,38 @@ function NavbarBoostrap() {
       className="navbar-reddion shadow-sm"
     >
       <Container>
-        {/* LOGO / MARCA */}
-        <Link to="/" className="navbar-brand d-flex align-items-center gap-2">
+        
+        <Link
+          to="/"
+          className="navbar-brand d-flex align-items-center gap-2"
+        >
           <span className="brand-reddion">REDDION</span>
         </Link>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler-reddion" />
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          className="toggler-reddion"
+        />
 
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="navbar-links mx-auto align-items-center gap-5">
-
+          
+          <Nav className="mx-auto align-items-center gap-5">
+            
             <Nav.Link
               as={NavLink}
               to="/"
-              className="nav-reddion-link mx-3"
+              end
+              className="nav-reddion-link"
             >
               Inicio
             </Nav.Link>
 
+            
             <NavDropdown
               title="Productos"
               id="productos-dropdown"
-              className="nav-reddion-link mx-3"
-              
+              className="nav-reddion-link"
+              menuVariant="dark"
             >
               <NavDropdown.Item as={NavLink} to="/" end>
                 Todos los productos
@@ -57,14 +66,14 @@ function NavbarBoostrap() {
               </NavDropdown.Item>
             </NavDropdown>
 
+            {/* Contacto */}
             <Nav.Link
               as={NavLink}
               to="/contacto"
-              className="nav-reddion-link mx-3"
+              className="nav-reddion-link"
             >
               Contacto
             </Nav.Link>
-
           </Nav>
         </Navbar.Collapse>
       </Container>

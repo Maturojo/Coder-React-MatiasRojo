@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import "../css/Item.css";
 
 const Item = ({ item }) => {
   return (
-    <div className="card h-100">
+    <div className="card-reddion">
       <img src={item.image} className="card-img-top" alt={item.title} />
       <div className="card-body d-flex flex-column">
         <h5 className="card-title">{item.title}</h5>

@@ -1,0 +1,17 @@
+* {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo general estilo Reddion */
+body {
+  background-color: #050505 !important;   /* negro Reddion */
+  color: #fff;
+}
+
+/* Para asegurar que el contenedor central no rompa */
+.container {
+  color: #ffffff;
+}
