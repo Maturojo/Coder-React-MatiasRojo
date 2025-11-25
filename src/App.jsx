@@ -1,4 +1,4 @@
-// src/App.jsx
+
 import { Routes, Route } from 'react-router-dom'
 import NavbarBoostrap from './components/NavbarBoostrap'
 import ItemListContainer from './components/ItemListContainer'
@@ -10,25 +10,25 @@ function App() {
       <NavbarBoostrap />
 
       <Routes>
-        {/* Catálogo completo */}
+       
         <Route
           path="/"
-          element={<ItemListContainer saludo="Bienvenido a mi REDDION" />}
+          element={<ItemListContainer saludo="Bienvenido a REDDION" />}
         />
 
-        {/* Catálogo filtrado por categoría */}
+        
         <Route
           path="/category/:categoryId"
           element={<ItemListContainer saludo="Productos por categoría" />}
         />
 
-        {/* Detalle de producto */}
+        
         <Route
           path="/item/:id"
           element={<ItemDetailContainer />}
         />
 
-        {/* 404 */}
+       
         <Route
           path="*"
           element={<h2 style={{ textAlign: 'center', marginTop: '2rem' }}>404 - Página no encontrada</h2>}

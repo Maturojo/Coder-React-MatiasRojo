@@ -1,4 +1,8 @@
-// src/mock/Asyncmock.jsx
+import remeraN from "../assets/remera.png"
+import remeraB from '../assets/RemeraBlancaSinfondo.jpg'
+import buzo from "../assets/BuzoSInFondo.jpg"
+import taza from "../assets/tazaSinfondo.jpg"
+
 
 export const products = [
   {
@@ -8,7 +12,7 @@ export const products = [
     price: 12000,
     category: "remeras",
     stock: 10,
-    image: "https://via.placeholder.com/300x200?text=Remera+Negra",
+    image: remeraN,
   },
   {
     id: "2",
@@ -17,7 +21,7 @@ export const products = [
     price: 11000,
     category: "remeras",
     stock: 8,
-    image: "https://via.placeholder.com/300x200?text=Remera+Blanca",
+    image: remeraB,
   },
   {
     id: "3",
@@ -26,7 +30,7 @@ export const products = [
     price: 25000,
     category: "hoodies",
     stock: 5,
-    image: "https://via.placeholder.com/300x200?text=Hoodie+Negro",
+    image: buzo,
   },
   {
     id: "4",
@@ -35,7 +39,7 @@ export const products = [
     price: 8000,
     category: "tazas",
     stock: 20,
-    image: "https://via.placeholder.com/300x200?text=Taza+Personalizada",
+    image: taza,
   },
 ];
 

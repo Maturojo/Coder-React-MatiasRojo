@@ -1,24 +1,61 @@
-// src/components/ItemDetailContainer.jsx
+
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getProductById } from "../services/products";  // 👈 ACA EL CAMBIO
+import { getProductById } from "../services/products";  
 import ItemDetail from "./ItemDetail";
+import logo from "../assets/logo.png";
+import "../css/ItemDetailContainer.css"
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState(null);
+  const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
   useEffect(() => {
+
+    setLoading(true);
+    setItem(null);
+
+    const MIN_DELAY = 500; 
+    const start = Date.now();
+
     getProductById(id).then((res) => {
-      setItem(res);
+      const elapsed = Date.now() - start;
+      const remaining = MIN_DELAY - elapsed;
+
+      if (remaining > 0) {
+        
+        setTimeout(() => {
+          setItem(res);
+          setLoading(false);
+        }, remaining);
+      } else {
+        
+        setItem(res);
+        setLoading(false);
+      }
     });
   }, [id]);
 
+  if (loading) {
+    return (
+      <div className="loading-wrapper">
+        <p className="loading-text">Cargando producto...</p>
+        <img src={logo} alt="Reddion" className="loading-logo" />
+      </div>
+    );
+  }
+
   if (!item) {
     return (
-      <h2 style={{ textAlign: "center", marginTop: "2rem" }}>
-        Cargando producto...
-      </h2>
+      <div className="loading-wrapper">
+        <p className="loading-text">Cargando producto...</p>
+        <img src={logo} alt="Reddion" className="loading-logo" />
+      </div>
+
+      
+
+
     );
   }
 

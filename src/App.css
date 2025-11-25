@@ -5,13 +5,17 @@
   box-sizing: border-box;
 }
 
-/* Fondo general estilo Reddion */
 body {
-  background-color: #050505 !important;   /* negro Reddion */
+  background-color: #050505 !important;   
   color: #fff;
 }
 
-/* Para asegurar que el contenedor central no rompa */
+
 .container {
   color: #ffffff;
+}
+
+h1 {
+  position: relative;
+  z-index: 5;  
 }
