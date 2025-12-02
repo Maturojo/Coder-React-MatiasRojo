@@ -1,7 +1,4 @@
-import remeraN from "../assets/remera.png"
-import remeraB from '../assets/RemeraBlancaSinfondo.jpg'
-import buzo from "../assets/BuzoSInFondo.jpg"
-import taza from "../assets/tazaSinfondo.jpg"
+
 
 
 export const products = [
@@ -12,7 +9,7 @@ export const products = [
     price: 12000,
     category: "remeras",
     stock: 10,
-    image: remeraN,
+    image: "/img/remera.png",
   },
   {
     id: "2",
@@ -21,7 +18,7 @@ export const products = [
     price: 11000,
     category: "remeras",
     stock: 8,
-    image: remeraB,
+    image: "/img/remera-blanca.jpg",
   },
   {
     id: "3",
@@ -30,7 +27,7 @@ export const products = [
     price: 25000,
     category: "hoodies",
     stock: 5,
-    image: buzo,
+    image: "img/buzo.jpg",
   },
   {
     id: "4",
@@ -39,7 +36,7 @@ export const products = [
     price: 8000,
     category: "tazas",
     stock: 20,
-    image: taza,
+    image: "img/taza.jpg",
   },
 ];
 

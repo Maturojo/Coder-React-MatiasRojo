@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProductById } from "../services/products";  
 import ItemDetail from "./ItemDetail";
-import logo from "../assets/logo.png";
+
 import "../css/ItemDetailContainer.css"
 
 const ItemDetailContainer = () => {
@@ -41,7 +41,7 @@ const ItemDetailContainer = () => {
     return (
       <div className="loading-wrapper">
         <p className="loading-text">Cargando producto...</p>
-        <img src={logo} alt="Reddion" className="loading-logo" />
+        <img src="img/logo.png" alt="Reddion" className="loading-logo" />
       </div>
     );
   }
@@ -50,7 +50,7 @@ const ItemDetailContainer = () => {
     return (
       <div className="loading-wrapper">
         <p className="loading-text">Cargando producto...</p>
-        <img src={logo} alt="Reddion" className="loading-logo" />
+        <img src="img/logo.png" alt="Reddion" className="loading-logo" />
       </div>
 
       
