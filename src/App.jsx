@@ -28,6 +28,11 @@ function App() {
           element={<ItemDetailContainer />}
         />
 
+        <Route
+          path="/cart" 
+          element={<h2 style={{textAlign:"center", marginTop:"2rem"}}>Carrito</h2>} />
+
+
        
         <Route
           path="*"

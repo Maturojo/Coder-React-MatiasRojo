@@ -134,4 +134,31 @@
   color: #fff !important;               
 }
 
+.cartwidget-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.cartwidget-icon {
+  font-size: 1.3rem;
+}
+
+.cartwidget-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #C1121F;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 2px 7px;
+  line-height: 1.2;
+}
+
+
 

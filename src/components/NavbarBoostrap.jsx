@@ -5,6 +5,8 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { NavLink, Link } from "react-router-dom";
 import { useCart } from "./useCart";
+import CartWidget from "./CartWidget";
+
 import "../css/Navbar.css";
 
 function NavbarBoostrap() {
@@ -77,6 +79,11 @@ function NavbarBoostrap() {
               Contacto
             </Nav.Link>
           </Nav>
+
+          <div className="d-flex align-items-center">
+            <CartWidget />
+          </div>
+          
         </Navbar.Collapse>
       </Container>
     </Navbar>
