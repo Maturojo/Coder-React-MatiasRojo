@@ -41,7 +41,7 @@ const ItemDetailContainer = () => {
     return (
       <div className="loading-wrapper">
         <p className="loading-text">Cargando producto...</p>
-        <img src="img/logo.png" alt="Reddion" className="loading-logo" />
+        <img src="/img/logo.png" alt="Reddion" className="loading-logo" />
       </div>
     );
   }
@@ -50,7 +50,7 @@ const ItemDetailContainer = () => {
     return (
       <div className="loading-wrapper">
         <p className="loading-text">Cargando producto...</p>
-        <img src="img/logo.png" alt="Reddion" className="loading-logo" />
+        <img src="/img/logo.png" alt="Reddion" className="loading-logo" />
       </div>
 
       

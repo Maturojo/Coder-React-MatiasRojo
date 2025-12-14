@@ -27,7 +27,7 @@ export const products = [
     price: 25000,
     category: "hoodies",
     stock: 5,
-    image: "img/buzo.jpg",
+    image: "/img/buzo.jpg",
   },
   {
     id: "4",
@@ -36,7 +36,7 @@ export const products = [
     price: 8000,
     category: "tazas",
     stock: 20,
-    image: "img/taza.jpg",
+    image: "/img/taza.jpg",
   },
 ];
 
