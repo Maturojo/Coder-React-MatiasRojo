@@ -3,6 +3,10 @@ import { Routes, Route } from 'react-router-dom'
 import NavbarBoostrap from './components/NavbarBoostrap'
 import ItemListContainer from './components/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer'
+import Checkout from "./components/Checkout";
+
+import Cart from "./components/Cart";
+
 
 function App() {
   return (
@@ -28,9 +32,18 @@ function App() {
           element={<ItemDetailContainer />}
         />
 
+        
+
         <Route
-          path="/cart" 
-          element={<h2 style={{textAlign:"center", marginTop:"2rem"}}>Carrito</h2>} />
+        path="/cart" element={<Cart />}
+        />
+
+        <Route
+        path="/checkout" element={<Checkout />}
+        />
+
+
+
 
 
        

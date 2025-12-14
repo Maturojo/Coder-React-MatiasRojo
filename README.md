@@ -1,16 +1,57 @@
-# React + Vite
+# Proyecto-Matias-Rojo – E-commerce React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto final del curso de React (Coderhouse).  
+Se desarrolló una Single Page Application (SPA) de e-commerce utilizando React, React Router, Context API y Firebase Firestore.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías utilizadas
 
-## React Compiler
+- React
+- React Router DOM
+- Context API
+- Firebase (Firestore)
+- Bootstrap
+- CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📦 Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🛍️ Catálogo de productos
+- Listado dinámico de productos.
+- Filtrado por categorías mediante rutas dinámicas.
+- Vista de detalle de cada producto.
+
+### ➕ Detalle de producto
+- Visualización de información detallada.
+- Selector de cantidad con validaciones de stock (`ItemCount`).
+- Agregado de productos al carrito.
+- Ocultamiento del contador luego de agregar al carrito.
+
+### 🛒 Carrito de compras
+- Estado global del carrito manejado con Context API.
+- Visualización de productos agregados, cantidades y subtotales.
+- Cálculo del total de la compra.
+- Widget del carrito con contador dinámico.
+
+### 🧭 Navegación
+- Navegación SPA utilizando React Router.
+- Rutas para catálogo, categorías, detalle, carrito y checkout.
+- Enlaces implementados desde la barra de navegación.
+
+### ☁️ Firebase / Firestore
+- Conexión a Firebase Firestore.
+- Persistencia de órdenes de compra en la nube.
+- Generación de ID único por cada orden.
+- Limpieza automática del carrito luego de confirmar la compra.
+
+
+
+Matías Rojo
+Proyecto desarrollado como entrega final del curso de React – Coderhouse
+
+
+
+
+
